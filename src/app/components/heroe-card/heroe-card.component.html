@@ -1,0 +1,12 @@
+<div class="card h-100">
+    <img src="../../../{{ heroe.img }}" class="card-img-top" [alt]="heroe.nombre">
+    <div class="card-body">
+        <h5 class="card-title text-center">{{ heroe.nombre }}</h5>
+        <p class="card-text text-truncate test">{{ heroe.bio }}</p>
+    </div>
+    <!-- <button [routerLink]="['/heroe',index]" class="btn btn-outline-dark m-3">Saber más</button> -->
+    <button (click)="verHeroe()" class="btn btn-dark m-3 mt-2">Ver mas</button>
+    <div class="card-footer">
+        <small class="text-muted">{{ heroe.aparicion }}</small>
+    </div>
+</div>

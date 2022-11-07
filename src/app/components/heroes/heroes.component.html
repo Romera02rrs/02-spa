@@ -1,24 +1,19 @@
 <div class="container py-4 animated fadeIn">
-    <header class="pb-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <img class="me-4" src="assets/img/A-64.png" alt="Bootstrap" width="50" height="40">
-            <span class="fs-4">Hreoes <small>Marvel y DC</small></span>
-        </a>
-    </header>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img src="../../../assets/img/aquaman.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <button class="btn btn-outline-dark m-3" >Saber más</button>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-      </div>
+  <header class="pb-3 mb-4 border-bottom">
+    <div class="d-flex align-items-center text-dark text-decoration-none">
+      <img class="me-4" src="assets/img/A-64.png" alt="Bootstrap" width="50" height="40">
+      <span class="fs-4">Hreoes <small>Marvel y DC</small></span>
+    </div>
+  </header>
+  <div *ngIf="heroes.length === 0" class="alert alert-danger d-flex align-items-center" role="alert">
+    <i class="bi bi-exclamation-triangle fs-5 me-4"></i>
+    <div>
+      No se han encontrado heroes con la búsqueda: <span class="fw-bold">{{ busqueda }}</span>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- <div class="col"> -->
+      <app-heroe-card [heroe]="heroe" *ngFor="let heroe of heroes" ></app-heroe-card>
+    <!-- </div> -->
+  </div>
 </div>
-

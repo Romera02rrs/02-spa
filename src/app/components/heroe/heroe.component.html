@@ -1,0 +1,24 @@
+<div class="container py-4 animated fadeIn">
+  <header class="pb-3 mb-4 border-bottom">
+    <div class="d-flex align-items-center text-dark text-decoration-none">
+      <img class="me-4" src="assets/img/A-64.png" alt="Bootstrap" width="50" height="40">
+      <span class="fs-4 text-center">{{ heroe.nombre | uppercase }} <span class="fs-5 ms-3">({{ heroe.aparicion | date:'y' }})</span></span>
+    </div>
+  </header>
+  <div class="row">
+    <div class="col-md-4">
+      <img [src]="heroe.img" alt="Hulk" class="img-fluid">
+      <br><br>
+      <a [routerLink]="['/heroes']" class="btn btn-outline-danger w-100 mt-5">regresar</a>
+    </div>
+    <div class="col-md-8">
+      <p>{{heroe.bio}}</p>
+      <div>
+        <img *ngIf="heroe.casa === 'Marvel'; else DC" src="assets/img/Marvel.png" alt="Marvel Logo" height="75" width="200">
+        <ng-template #DC>
+          <img src="assets/img/DC.svg" class="h-100" alt="DC Logo" height="100" width="100">
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
