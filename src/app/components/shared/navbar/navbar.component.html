@@ -12,15 +12,15 @@
           <a class="nav-link" role="button" [routerLink]="['home']" routerLinkActive="active">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" role="button" [routerLink]="['heroes']" routerLinkActive="active">Heores</a>
+          <a class="nav-link" role="button" [routerLink]="['heroes']" routerLinkActive="active">Héores</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" role="button" [routerLink]="['about']" routerLinkActive="active">About</a>
         </li>
       </ul>
       <div class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" (keyup)="buscarHeroe(buscarTexto.value)" #buscarTexto>
-        <button class="btn btn-outline-success" type="button" (click)="buscarHeroe(buscarTexto.value)">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Buscar Héroe" aria-label="Search" (keyup)="buscarHeroe(buscarTexto.value)" #buscarTexto>
+        <button class="btn btn-outline-primary" type="button" (click)="buscarHeroe(buscarTexto.value)">Search</button>
       </div>
     </div>
   </div>
